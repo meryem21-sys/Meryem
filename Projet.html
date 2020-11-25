@@ -1,0 +1,592 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Projets</title>
+</head>
+<style>
+/*-----CSS Projet gestion vol-----*/
+body{
+	font-family: Apple Chancery, sans-serif;
+	background-color: white ;
+}
+
+.sidebar{
+	height:100%;
+	width:200px;
+	position:absolute;
+	z-index:1;
+	overflow:auto;
+}
+
+
+h1 {
+	margin-left: 50px;
+	font-size: 20px;
+}
+
+
+h3 {
+	margin-left: 200px;
+	font-size: 15px;
+}
+
+
+#bande_horizontale{
+padding: 0px;
+margin: 0px;
+border: none;
+width: 100%;
+height: 33%;
+background: linear-gradient(#85e7e7, white);
+}
+
+#bande_horizontale1{
+padding: 0px;
+margin: 0px;
+border: none;
+width: 100%;
+height: 10%;
+background: linear-gradient(#85e7e7, white);
+}
+
+.titre{
+	color : black;
+	margin-left:15%;
+	font-size : 40px;
+	padding-top:4%;
+	font: italic small-caps bold 40px/2 cursive;
+
+}
+
+.infos {
+	color: black;
+	height : 25%;
+	padding-right: 20px;
+	margin-top: -70px;
+	font-size :30px;
+	padding-top: 0px;
+	float:right;
+	text-align: right;
+	margin-left: 50%;
+}
+
+
+#gauche{
+	margin-right:50%;
+	padding-top:0px;
+}
+
+.bande1{ 
+padding: 0px; 
+margin-left: 60px; 
+margin-top: -460px;
+border: none; 
+width: 10px; 
+height: 430px; 
+background-color: #85e7e7; 
+}
+
+.bande2{
+
+margin-left: 60px; 
+margin-top: -460px;
+border: none; 
+width: 10px; 
+height: 430px; 
+background-color:#85e7e7; 
+}
+
+
+.bandedroite{
+	background-color: white;
+	width : 30%;
+	height : 1200px;
+	margin-left : 70%;
+	margin-top : -1200px;
+	padding-left: 30px;
+	padding-top: 10px;
+}
+
+
+img {
+border:1px solid black;
+}
+
+#menu-accordeon {
+  padding:0;
+  margin:0;
+  list-style:none;
+  text-align: center;
+  width: 180px;
+}
+#menu-accordeon ul {
+  padding:0;
+  margin:0;
+  list-style:none;
+  text-align: center;
+}
+#menu-accordeon li {
+   background-color: #E9D24F;
+   border-radius: 6px;
+   margin-bottom:2px;
+   box-shadow: 3px 3px 3px #999;
+   border:solid 1px #333A40
+}
+#menu-accordeon li li {
+   max-height:0;
+   overflow: hidden;
+   transition: all .5s;
+   border-radius:0;
+   background: #444;
+   box-shadow: none;
+   border:none;
+   margin:0
+}
+#menu-accordeon a {
+  display:block;
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 0;
+  font-family: verdana;
+  font-size:1.2em
+}
+#menu-accordeon ul li a, #menu-accordeon li:hover li a {
+  font-size:1em
+}
+#menu-accordeon li:hover {
+   background: #D3F7EE
+}
+#menu-accordeon li li:hover {
+   background: #AEAFAF;
+}
+#menu-accordeon ul li:last-child {
+   border-radius: 0 0 6px 6px;
+   border:none;
+}
+#menu-accordeon li:hover li {
+  max-height: 15em;
+}
+
+/*----- Menu -----*/
+@media screen and (min-width: 860px) {
+	.menu {
+	width:100%;
+	padding:10px 18px;
+	box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+	border-radius:3px;
+	background:#303030;
+	}
+}
+
+.menu ul {
+	display:inline-block;
+}
+
+.menu li {
+	margin:0px 50px 0px 0px;
+	float:left;
+	list-style:none;
+	font-size:17px;
+}
+
+.menu li:last-child {
+	margin-right:0px;
+}
+
+.menu a {
+	text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+	color:#777;
+	transition:color linear 0.15s;
+}
+
+.menu a:hover, .menu .current-item a {
+	text-decoration:none;
+	color:rgb(28, 198, 228);
+}
+
+
+/*----- Responsive -----*/
+@media screen and (max-width: 1150px) {
+	.wrap {
+		width:90%;
+	}
+}
+
+@media screen and (max-width: 970px) {
+	.search-form input {
+		width:120px;
+	}
+}
+
+@media screen and (max-width: 860px) {
+	.menu {
+		position:relative;
+		display:inline-block;
+	}
+
+	.menu ul.active {
+		display:none;
+	}
+
+	.menu ul {
+		width:100%;
+		position:absolute;
+		top:120%;
+		left:0px;
+		padding:10px 18px;
+		box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+		border-radius:3px;
+		background:#303030;
+	}
+
+	.menu ul:after {
+		width:0px;
+		height:0px;
+		position:absolute;
+		top:0%;
+		left:22px;
+		content:'';
+		transform:translate(0%, -100%);
+		border-left:7px solid transparent;
+		border-right:7px solid transparent;
+		border-bottom:7px solid #303030;
+	}
+
+	.menu li {
+		margin:5px 0px 5px 0px;
+		float:none;
+		display:block;
+	}
+
+	.menu a {
+		display:block;
+    }
+
+
+</style>
+
+
+
+
+
+<body> 
+
+<!-- Menu -->
+    <nav class="menu">
+        <ul class="active">
+            <li class="current-item"><a href="index.html"><i class="fa fa-fw fa-home"></i></i>ACCUEIL</a></li>
+           
+            <li>
+                  <A href="#3">Gestion Vols </A>
+              </li>
+              <li>
+                  <A href="#4"> Formulaire VBA</A>
+              </li>
+              <li>
+                  <A href="#5"> Autres Projets universitaire </A>
+              </li>
+        </ul>
+    
+     
+    </nav>
+
+
+
+ <!--Projet gestion des vols  -->
+<div id="bande_horizontale">
+		
+		<div class="titre"> 
+		Gestion Vols
+		</div>
+
+
+		<div class="infos"> 
+		Comment gérer un fichier texte composé d'un liste de données ordonnées ?
+		</div>
+
+
+</div>
+
+</br>
+</br>
+</br>
+
+<div id="Gauche">
+    <div id="3"><h1 > Le Projet: Gestion Vols </h1></div>
+  
+</br>
+
+
+		<h3> <u> Introduction au langage Python  </u> </h3>
+		<pre> 
+		Python est un langage de programmation puissant et facile à apprendre. Il dispose de structures de données de haut niveau 
+		et permet une approche simple mais efficace de la programmation orientée objet. C'est aussi un langage idéal pour l'écriture 
+		de scripts et le développement rapide d'applications dans de nombreux domaines et sur la plupart des plateformes.
+		Les types de base en Python sont relativement complets et puissants. Il y a, entre autres :
+		- Les objets numériques : "int" est un entier, "float" un flottant
+		- Les objets « itérables » :  "tuple" sont des listes immuables d'objets hétérogènes, "list" sont des tableaux dynamiques et
+		"dict" sont des tableaux associatifs permettant d'associer un objet (une clef) à un autre
+		- Les autres objets, n'étant ni numériques ni itérables : bool, module, function, type, none...
+		<a href="https://fr.wikipedia.org/wiki/Python_(langage)">Plus d'infos </a>
+		</pre>
+
+		<h3> <u> Le sujet du devoir </u> </h3>
+		<pre>
+		"Une agence de voyage dispose d’un fichier vols.txt où elle a répertorié tous les vols directs qu’elle propose: numero de vol,
+		ville de départ, ville d'arrivée, date de départ, horaire de départ, durée du vol, le prix du billet , la compagnie aérienne.
+		Elle souhaite développer une application qui exploite ce fichier. Ainsi il doit etre possible d'ajouter un nouveau vol, de 
+		modofier un vol, de mettre à jour la base de données, de supprimer un vol, de faire des recherches dans le fichier texte.
+		De plus, l'agence dispose d'un ficher texte clients.txt comprenant toutes les informatiosn sur les clients (age, nom, prenom,
+		adresse, email...). Un autre fichier Reservations.txt permet de faire le lien entre le fichers Clients.txt et Vols.txt. "
+		Le but de ce projet était donc de savoir gérer les 3 fichers textes pour pouvoir générer des rapports/tableaux de bord, des 
+		rapports « état des lieux » sur une période donnée, par destination, par compagnie aérienne, ou encore pour compare les 
+		destinations les plus desservies, les plus réservées…
+		</pre>
+	<div class="bande1"> 
+	</div>
+
+
+	</br>
+	</br>
+	<h1> Le devoir </h1>
+</br>
+
+		<h3> <u> Gestion des vols et des clients  </u> </h3>
+		<pre> 
+		Les données étant dans un ficher texte, il a d'abord fallu les extraire. Pour se faire nous avons écris un fonction permettant
+		de mettre ligne par lignes les données dans une liste et un dictionnaire. Ainsi le traitement des données est beaucoup plus 
+		simple. A partir des ces listes, on a ensuite créé des fonctiosns permettant d'ajouter uo de supprimer un nouveau vols/clients
+		ou encore de modifier les informations concernant un vol/un client. Ensuite il a fallu écrire une fonction permettant de mettre 
+		à jour les différents fichers textes. 
+
+		</pre>
+
+		<h3> <u> L'application </u> </h3>
+		<pre>
+		Pour faire appel à toutes ces fonctions on a crée un programme principal avec un menu. Lors du lancement de l'application, 
+		l'utilisateur entre son choix (modifier, supprimer etc..). Le programme fait ensuite appel aux différents fonctions écrites
+		pour exécuter le chpix de l'utilisateur. 
+		Par exemple: si l'utilsateur sélectionne le choix 7, il va devoir écrire un prix seuil. Le programme appelle ensuite la fonction
+		"volPrix" qui va retourner une liste de tous les vols ayant un prix inférieur au prix entré par l'utilisateur.
+		
+		</pre>
+
+		<h3> <u> Génerer des rapports et des tableaux de bord </u> </h3>
+		<pre>
+		Dans cette partie, il fallait générer des rapports:
+		1. Etat des lieux des vols, clients et réservations sur tout le mois
+		2. Evolution des chiffres semaine par semaine.
+		Avec plusieurs indicateurs :
+		- Nombre de vols total, nombre de compagnies aériennes impliquées, nombre de clients (nouveaux et anciens), nombre total de places...
+		- Les mêmes indicateurs par destination, par départ.
+		- Villes Clés et leurs chiffres ( ex: La 1ère destination au départ de Paris, la 1ère provenance)	
+		3. Evolution des statistiques sur les trois mois semaine par semaine
+		4. Sauvegarder les indicateurs dans un fichier texte et réaliser une dataviz avec outil de visualisation.
+		Par manque de temps, cette partie n'a pas été traitée.
+		</pre>
+
+	<div class="bande2">
+	</div>
+
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+
+</div>
+
+<div class="bandedroite">
+
+</br>
+</br>
+</br> 
+</br>
+
+<h3> Les fonctions </h3>
+<a href="fonctions.png">
+<img src="fonctions.png" height="400px" width="400px">
+</a>
+</br> 
+</br>
+
+
+
+<h3> Le menu principal </h3>
+<a href="menu.png">
+<img src="menu.png" height="500px" width="400px">
+</a>
+</br> 
+</br>
+
+</div>
+
+<!--Formulaire VBA-->
+
+<div id="bande_horizontale">
+		
+		<div id = 4><div class="titre"> 
+		 Formulaire VBA
+		</div></div>
+
+
+		<div class="infos"> 
+		Réalisation d'interfaces utilisateurs simples et modifiables 
+		</div>
+
+
+</div>
+
+</br>
+</br>
+</br>
+
+<div id="Gauche">
+
+    <h1> Projet</h1>
+</br>
+
+
+		<h3> <u> Petite définition pour commencer </u> </h3>
+		<pre> 
+		Tout d'abord, le VBA (pour Visual Basic for Applications) est un langage créé par Microsoft ayant pour but d'être
+		utilisé dans ses logiciels (Excel, Word, etc...). Celui-ci est un langage très riche et, bien que n'étant pas orienté 
+		objet, celui-ci est extremmement flexible. Son utilisation principale revient à la création de Macro, permettant 
+		d'améliorer l'ergonomie offerte à l'utilisateur final, voir même de permettre une automatisation quasi-complète des 
+		actions à mener.
+		De son coté, le formulaire, appelé aussi Userform, permet de réaliser des interfaces utilisateurs simples et conviviales 
+		pour la saisie, la modification ou la visualisation de données. Nous allons dans ce chapitre expliquer le fonctionnement
+		de base de la création de formulaire à l’aide de plusieurs exemples.
+		Dans ce projet, nous avons utilisé le langage VBA dans Excel.
+
+		</pre>
+
+		<h3> <u> Le sujet </u> </h3>
+		<pre>
+		Ce projet a été donné par Madame Bouali en "Programmation avancée VBA". Nous avons eu 4 semaines pour le faire.
+		Le but était de créer un formualire permettant de gérer une "base de données" sous forme d'un tableau Excel. Nous avions a 
+		notre disposition un tableau Excel rempli de données concernant des voitures (la marque, le prix, le nuémro, la date, la ville...)
+		A partir de ce tableau nous devions créer un UserForm permettant de :
+		- afficher le tableau dans une autre feuille Excel
+		- metttre le les données dans un tableau
+		- rajouter une voiture
+		- supprimer une voiture
+		- rechercher des voitures en fonction du prix, du modèle 
+
+		</pre>
+
+
+	<div class="bande1"> 
+	</div>
+
+
+	</br>
+	</br>
+	</br>
+	<h1> Réalisation </h1>
+</br>
+
+		<h3> <u> Etape 1 : écrire les fonctions et les procédures </u> </h3>
+		<pre> 
+		Un fois le tableau de données chargé il faut écrire les foncions et les procédure (supprimer, insérer, rechercher...).
+		Une fonction est une forme d’instruction composée dont l’exécution dépends de paramètres qui retourne un élèment alors que
+		la procédure ne retourne rien.
+		Après avoir choisis quoi mettre en paramètre, il faut passer à l'écriture de la fonction/procédure. Leur écriture se font à 
+		l'aide de boucle "while", de boucles de "for" par exemple. 
+		Une procédure s'écrit de la manière suivante:
+		<i>Private Sub [nom de la procédure]()
+		[...]
+		End Sub </i>
+		Une fonction s'écrit de la manière suivante:
+		<i>Function [nom de la fonction]()
+		[...]
+		End Function  </i>
+		L'écriture des fonctions et des procédure se fait dans une page appelée "Module".
+		<font color="008000"><b>Pour mieux visualiser les photos, cliquez dessus !!!! </b></font>
+		
+		</pre>
+
+		<h3> <u> Etape 2 : créer le formulaire  </u> </h3>
+		<pre>
+		Plusieurs élèments peuvent etre intégrés dans userform. On peut regrouper des cases d'options, des cases à cocher, des zones 
+		de textes,des listes déroulantes ou encore des boutons. 
+		Pour créer ce userform il a fallu comprendre ce qu'on demandait pour trouver l'élèment adapaté à mettre dans le formulaire. 
+		Nous avons d'abord créer un menu principal qui renvoit vers d'autres sous menu (voir photos). 
+		
+		</pre>
+
+		<h3> <u> Etape 3 : lier le formulaire et les fonctions </u> </h3>
+		<pre>
+		Pour écrire le programme principale il faut lier lier le formulaire et les fonctions. par exemple en cliquant sur le 1er 
+		bouton du menu principal, un autre menu s'ouvre. Cela se fait grace à la fonction "Click", mais il existe un tas d'autres 
+		fonctionnalités:
+		- Exit : L’événement Exit se produit juste avant qu’un contrôle ne perde le focus au profit d’un autre contrôle dans le 
+		même formulaire ou état
+		- Enter : L'événement Enter se produit avant un contrôle ne reçoive le focus d'un contrôle sur le même formulaire ou état.
+		- MouseDown : L'événement MouseDown se produit lorsque l'utilisateur appuie sur un bouton de la souris.
+		Pour appeler une procédure il suffit d'écrire "call" suivie du nom de la procédure. Pour retourner l'élèment d'une fonction 
+		il faut écrire: [variable] = [le nom de la fonction avec ces paramètres]
+		
+
+		</pre>
+		
+		<h3> <u> Résultat / Manipulation </u> </h3>
+		<pre>
+		Grace à la fonction "Open" le formulaire s'affiche directement à l'ouverture du fichier Excel. l'utilisateur n'a plus qu'a 
+		cliquer sur l'un des boutons du menu principal. Il sera ensuite redirigé vers un sous menu approprié à son premier choix. 
+		S'il choisit par exemple d'insérer une voiture, l'utilisateur devra remplir tous les champs : numéro, marque, année, modèle, 
+		ville, prix). Pour lancer l'éxécution il suffit de cliquer sur valider. La ligne est ensuite rajoutée au tableau. 
+
+		</pre>
+
+	<div class="bande2">
+	</div>
+
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+
+</div>
+
+<div class="bandedroite">
+
+</br>
+</br>
+</br> 
+</br>
+
+<a href="image0vba.jpg">
+<img src="image0vba.jpg" height="200px" width="400px">
+</a>
+</br> 
+</br>
+<a href="image3vba.png">
+<img src="image3vba.png" height="200px" width="400px">
+</a>
+</br> 
+</br>
+<a href="image4vba.png">
+<img src="image4vba.png" height="200px" width="400px">
+</a>
+</br> 
+</br>
+<a href="image1vba.png">
+<img src="image1vba.png" height="350px" width="400px">
+</a>
+</br> 
+</br>
+
+</br> 
+</br>
+
+</div>
+<div id="bande_horizontale1">
+<div id=5></div>
+<p>Veuillez consulter d'autres projets via le lien suivant: <a href= "https://drive.google.com/drive/folders/1eo19B6yoAMYPDxdXtqzE1BHAZ4w9NLkX?usp=sharing">PROJETS MERYEM</a> </p>
+</div>
+
+
+</body>
+</html>
