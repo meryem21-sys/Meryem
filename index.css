@@ -1,0 +1,179 @@
+
+body {
+    
+    font-size: 14px;
+    background-color:#F5F5F5;
+    font-family: HelveticaNeueW01-45Ligh,Helvetica,Arial,sans-serif;
+    background-image:linear-gradient(rgba(24, 188, 238, 0.699),rgba(230, 218, 231, 0.521)), url("iut.jpg");
+    background-size: 1600px 630px;
+    background-repeat: no-repeat;
+    background-position:center 35% bottom 45% ;
+   
+  
+   
+}
+.titre{
+    background-color:#F5F5F5;
+    font-style: italic;
+    text-align: center;
+    font-size: 1.3em;
+    color: white;
+    text-shadow:5px 5px 0 rgb(28, 198, 228);
+    border: thick double rgb(28, 198, 228);
+    
+
+}
+
+
+
+
+/*----- Menu -----*/
+@media screen and (min-width: 860px) {
+	.menu {
+	width:100%;
+	padding:10px 18px;
+	box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+	border-radius:3px;
+	background:#303030;
+	}
+}
+
+.menu ul {
+	display:inline-block;
+}
+
+.menu li {
+	margin:0px 50px 0px 0px;
+	float:left;
+	list-style:none;
+	font-size:17px;
+}
+
+.menu li:last-child {
+	margin-right:0px;
+}
+
+.menu a {
+	text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+	color:#777;
+	transition:color linear 0.15s;
+}
+
+.menu a:hover, .menu .current-item a {
+	text-decoration:none;
+	color:rgb(28, 198, 228);
+}
+
+
+/*----- Responsive -----*/
+@media screen and (max-width: 1150px) {
+	.wrap {
+		width:90%;
+	}
+}
+
+@media screen and (max-width: 970px) {
+	.search-form input {
+		width:120px;
+	}
+}
+
+@media screen and (max-width: 860px) {
+	.menu {
+		position:relative;
+		display:inline-block;
+	}
+
+	.menu ul.active {
+		display:none;
+	}
+
+	.menu ul {
+		width:100%;
+		position:absolute;
+		top:120%;
+		left:0px;
+		padding:10px 18px;
+		box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+		border-radius:3px;
+		background:#303030;
+	}
+
+	.menu ul:after {
+		width:0px;
+		height:0px;
+		position:absolute;
+		top:0%;
+		left:22px;
+		content:'';
+		transform:translate(0%, -100%);
+		border-left:7px solid transparent;
+		border-right:7px solid transparent;
+		border-bottom:7px solid #303030;
+	}
+
+	.menu li {
+		margin:5px 0px 5px 0px;
+		float:none;
+		display:block;
+	}
+
+	.menu a {
+		display:block;
+    }
+  
+/* Définir les caractéristiques de la zone à personnaliser (image, couleur de fond, position...) */
+
+.zone{
+	position: relative; 
+	top: 100px; 
+	left: 250px;
+	background-image: url('Meryem.jpg');
+	background-size: contain;
+	background-color:#FCD7F2;
+	background-repeat:no-repeat;
+	background-position: left;
+	width: 800px;
+}
+
+/* Ajustement des données à gauche de la zone */
+
+.zone p{text-align:left;
+	color:white;
+	margin-left:400px;
+}
+
+/* Création du cadre "Voir mon cv" */
+
+.zone1{
+	background-color:white;
+	border: thin;
+	text-align:center;
+	margin-left:400px;
+	width: 275px;
+}
+
+/* Création du cadre "Espace personnel" et définir sa position */
+
+.zone2{
+	background-color:white;
+	border: thin;
+	text-align:center;
+	margin-left:400px;
+	width: 275px;
+}
+
+/* Création du cadre "Voir les autres membres" et définir sa position */
+
+.zone3{
+	position: relative; 
+	bottom: 140px; 
+	left: 0px;
+	background-color:white;
+	border: thin;
+	text-align:center;
+	margin-left:800px;
+	width:50px;
+	writing-mode: vertical-rl;
+	text-orientation: sideways;
+}
