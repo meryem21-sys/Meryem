@@ -1,0 +1,474 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Ma page personnelle </title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+       
+      /*---------Icone style-----*/  
+        .icon-bar {
+          position: fixed;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+        }
+        
+        .icon-bar a {
+          display: block;
+          text-align: center;
+          padding: 16px;
+          transition: all 0.3s ease;
+          color: white;
+          font-size: 20px;
+        }
+        
+        .icon-bar a:hover {
+          background-color: #000;
+        }
+        
+        .facebook {
+          background: #3B5998;
+          color: white;
+        }
+        
+        .twitter {
+          background: #55ACEE;
+          color: white;
+        }
+        
+        .google {
+          background: #dd4b39;
+          color: white;
+        }
+        
+        .linkedin {
+          background: #007bb5;
+          color: white;
+        }
+        
+        .Instagram {
+          background: #7a2781;
+          color: white;
+        }
+        
+        .content {
+          margin-left: 75px;
+          font-size: 30px;
+        }
+/*--------------------------------------------------------------------*/
+
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 75%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background:#303030;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+  margin-top: 24.5em;
+  text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+  color:#777;
+  transition:color linear 0.15s;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+  margin-top: 32em;
+  margin-left: 3.5em;
+}
+
+#H {background-color: rgba(218, 156, 204, 0.966);}
+#N {background-color: rgb(133, 206, 216);}
+#C {background-color: rgb(225, 235, 165);}
+#A {background-color: rgb(235, 210, 163);}
+
+/* ---------------------------------------------------------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+  
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+/*-----------------------------------------video-----------------------*/
+#myVideo {
+
+right: 0;
+bottom: 0;
+padding: 50px;
+width: 100%;
+padding-bottom: 0px;
+}
+.Text {
+
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 90%;
+  padding: 20px;
+  margin-bottom: 200px;
+  margin-left: 50px;
+}
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+/*-----footer style-----*/
+.footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+        color: white;
+        text-align: center;
+        height: 7em;
+     }
+/*------------Rating stars --------*/
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+
+
+/*-------------Chat-------------*/
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+        </style>
+</head>
+
+<body>
+
+
+<div class="titre">
+        <h1>
+            Lachgar Meryem
+       </h1>
+</div>
+  
+<nav class="menu">
+    <ul class="active">
+        <li class="current-item"><a href="index.html"><i class="fa fa-fw fa-home"></i></i>ACCUEIL</a></li>
+
+        <li><a href="Projet.html"><i class="fa fa-camera-retro"></i>Espace Projets</a></li>
+
+    </ul>
+
+ 
+</nav>
+
+ <!-- Icons for the sticky Social Bar -->
+ <div class="icon-bar">
+    <a href="https://www.facebook.com/meryem.lachgar.50/" class="facebook"><i class="fa fa-facebook"></i></a> 
+    <a href="https://twitter.com/Meryem45543837" class="twitter"><i class="fa fa-twitter"></i></a> 
+    <a href="mailto:meryemlachgar2001@gmail.com" class="google"><i class="fa fa-google"></i></a> 
+    <a href="https://www.linkedin.com/in/meryem-lachgar-652b38141/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+    <a href="https://www.instagram.com/mery_lachgar/" class="Instagram"><i class="fa fa-Instagram"></i></a> 
+  </div>
+ <!-- MAIN (Center website) -->
+
+ <button class="tablink" onclick="openPage('H', this, 'rgba(218, 156, 204, 0.966)')">Informatique </button>
+ <button class="tablink" onclick="openPage('N', this, 'rgb(133, 206, 216)')" id="defaultOpen">Statistiques</button>
+ <button class="tablink" onclick="openPage('C', this, ' rgb(225, 235, 165)')">Reporting </button>
+ <button class="tablink" onclick="openPage('A', this, 'rgb(235, 210, 163)')">Développement web</button>
+ 
+ <div id="H" class="tabcontent">
+    <h2>Informatique</h2>
+    <p>
+    <ul>
+        <li>Conception, gestion et animation de bases de données.</li>
+        <li>Programmation ( Python, Visual Basic, HTML, SAS, Rstudio, Talend, Php,SQL)</li>
+        <li>Pack Office (Word, PowerPoint, Excel, Access)</li>
+        <li>Automatisation de BDD</li>
+    </ul>
+
+
+     </p>
+ </div>
+ 
+ <div id="N" class="tabcontent">
+    <h2>Statistiques</h2>
+    <p>
+    <ul>
+        <li>Collecte, analyse et synthèse de l’information.</li> 
+        <li>Réalisation d’enquêtes et de sondages.</li>
+        <li>Évaluation des risques, réalisation de prévisions.</li>
+        <li>Prise en charge des résultats commerciaux (statistique des ventes, des stocks …)</li>
+    </ul>
+
+     </p>
+ </div>
+ 
+ <div id="C" class="tabcontent">
+   <h2>Reporting</h2>
+                   
+   <p>
+  <ul>
+    <li>Production de tableaux de bord</li>
+    <li>Création d’outils de pilotage</li>
+    <li>Réalisation du Data visualisation</li>
+  </ul>
+
+   </p>
+ </div>
+ 
+ <div id="A" class="tabcontent">
+    <h2>Développement web</h2>
+            <p>
+                <ul>
+                    <li>Réalisation de sites Web dynamiques avec HTML, CSS, PHP</li>
+                    <li>Maquettage d’une application</li>
+                    
+                </ul>
+
+             </p>
+ </div>
+ 
+ <script>
+ function openPage(pageName,elmnt,color) {
+   var i, tabcontent, tablinks;
+   tabcontent = document.getElementsByClassName("tabcontent");
+   for (i = 0; i < tabcontent.length; i++) {
+     tabcontent[i].style.display = "none";
+   }
+   tablinks = document.getElementsByClassName("tablink");
+   for (i = 0; i < tablinks.length; i++) {
+     tablinks[i].style.backgroundColor = "";
+   }
+   document.getElementById(pageName).style.display = "block";
+   elmnt.style.backgroundColor = color;
+ }
+ 
+ // Get the element with id="defaultOpen" and click on it
+ document.getElementById("defaultOpen").click();
+ </script>
+
+
+
+<div class="main">
+
+    
+
+<!-- Video -->
+    <video  id="myVideo">
+        <source src="lachgar-meryem-video_hCkfd5cI.mp4" type="video/mp4" style=" width: 1600px; height: 630px;">
+        Your browser does not support HTML5 video.
+      </video>
+      
+      <div class="Text">
+        <h2>Présentation</h2>
+        
+        <button id="myBtn" onclick="myFunction()">Pause</button>
+      </div>
+      
+      <script>
+      var video = document.getElementById("myVideo");
+      var btn = document.getElementById("myBtn");
+      
+      function myFunction() {
+        if (video.paused) {
+          video.play();
+          btn.innerHTML = "Pause";
+        } else {
+          video.pause();
+          btn.innerHTML = "Play";
+        }
+      }
+      </script>
+    
+  
+<!-- END MAIN -->
+    
+
+
+        
+
+
+ <!-- footer -->
+
+<div class="footer">
+
+
+    <div class="rating">
+       <p>Tel: +33 7 64 02 76 64</p> 
+       <p>Mail:meryem.lachgar.etu@univ-lille.fr</p> 
+        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+        </div>
+   
+
+      </div>
+ 
+
+</body>
+
+</html>
